@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Banner - StudyBuddy - 200x200 </title>
+<script type="text/javascript" src="https://secure-ds.serving-sys.com/BurstingScript/EBLoader.js"></script>
+<link rel="stylesheet" href="style.css"/>
+<script type="text/javascript">
+	function initEB(){
+		if (!EB.isInitialized()){
+			EB.addEventListener(EBG.EventName.EB_INITIALIZED, startAd);
+		}else{
+			startAd();
+		}
+	}
+	function startAd(){
+		document.getElementById("banner").style.visibility = "visible";
+	}
+	function handleBannerClick(){
+		EB.clickthrough();
+	}
+</script>
+</head>
+<body onload="initEB();">
+	<div id="ad">
+        <div id="banner" onclick="javascript:handleBannerClick();">
+            <!-- FRAME 1 -->
+			<h1> Content first frame here </h1>
+            <!-- FRAME 2 -->
+            <h1> Content 2nd frame here </h1>
+            <!-- FRAME 3 -->
+            <h1> And so on...</h1>
+		</div>
+	</div>
+</body>
+</html>
