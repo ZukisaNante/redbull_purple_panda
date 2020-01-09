@@ -7,10 +7,30 @@ STYLE: ALL STYLES HERE
 #ad, body{
 	width: 680px;
 	height: 200px;
+	border: 1px solid black;
+	overflow: hidden;
 }
 
+/* image alignment */
+.cartoon_image, .reg_image, .lite_image{
+	width: 30%;
+	height: 180px;
+	float: left;
+	position: absolute;
+	 z-index: -1;
 
+} 
 
+/* h1 */
+.cartoon,.reg,.lite{
+	/* font-size: 20px; */
+	float: right;
+	/* width: 60%; */
+	margin-left: 40%;
+	padding-top: 40px;
+	display: inline;
+
+}
 
 
 /*
@@ -20,3 +40,36 @@ ANIMATION: ALL ANIMATIONS AND KEYFRAMES HERE
 --> Zoek op: 'CSS Keyframes'
 
 */
+
+/* cartoon_image and h1 aniimiation */
+  .cartoon{
+	animation-duration: 1s;
+	animation-name: slidein_right;
+	/* animation-iteration-count: infinite; */
+	/* animation-direction: alternate; */
+}
+
+/* Standard syntax */
+@keyframes slidein_right {
+  from {
+	  margin-left: 300%;
+	  width: 0%;
+	  }
+
+	  /* 100% {
+    opacity: 0;
+    transform: translate(200px, 0);
+  } */
+  
+
+  to {
+	 margin-left: 0%;
+	  width: 60%;
+	  }
+}
+
+/* Standard syntax */
+/* @keyframes mymove {
+  from {top: 0px;}
+  to {bottom: 100px;}
+} */
